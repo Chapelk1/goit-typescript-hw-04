@@ -5,12 +5,12 @@ type MenuIds = "first" | "second" | "last";
 type Menu = { id: MenuIds; title: string };
 
 interface SelectedMenu {
-  id: MenuIds
+  id?: MenuIds
 }
 
 // Додати тип Menu Selected
 interface MenuSelected {
-  SelectedMenu: SelectedMenu;
+  selectedMenu: SelectedMenu;
 }
 
 const MenuSelectedContext = createContext<MenuSelected>({
